@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Syntax Star - A Synonym Recommendation System</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="" name="keywords"/>
+<meta content="" name="description"/>
+
+
+
+
+<!-- Favicon -->
+<link href="../../static/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../../SyntaxStar/lib/animate/animate.min.css" rel="stylesheet"/>
+<!-- Google Web Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
+<!-- Libraries Stylesheet -->
+<link href="lib/animate/animate.min.css" rel="stylesheet"/>
+<link href="../../SyntaxStar/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+<link href="../../SyntaxStar/lib/lightbox/css/lightbox.min.css" rel="stylesheet"/>
+<!-- Customized Bootstrap Stylesheet -->
+<link href="../../SyntaxStar/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Template Stylesheet -->
+<link href="../../SyntaxStar/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-xxl bg-white p-0">
+<!-- Spinner Start -->
+<div class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
+<div class="spinner-grow text-primary" role="status" style="width: 3rem; height: 3rem;">
+<span class="sr-only">Loading...</span>
+</div>
+
+
+</div>
+<!-- Spinner End -->
+<!-- Navbar & Hero Start -->
+<div class="container-xxl position-relative p-0">
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+<a class="navbar-brand p-0" href="">
+<h1 class="m-0"><i class="fa fa-search me-2"></i>Syntax<span class="fs-5">Star</span></h1>
+<img src="../../SyntaxStar/img/book-logo.png" alt="Logo">
+</a>
+<button class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="fa fa-bars"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<div class="navbar-nav ms-auto py-0">
+<a class="nav-item nav-link" href="index.html">Home</a>
+<a class="nav-item nav-link active" href="about.html">About</a>
+                            </div>
+                        </div>
+</div>
+<!-- <butaton class="btn text-secondary ms-3" data-bs-target="#searchModal" data-bs-toggle="modal" type="button"><i class="fa fa-search"></i></butaton> -->
+<a class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3" href="">Reload</a>
+</div>
+</nav>
+<div class="container-xxl py-5 bg-primary hero-header mb-5">
+<div class="container my-5 py-5 px-lg-5">
+<div class="row g-5 py-5">
+<div class="col-12 text-center">
+<h1 class="text-white animated zoomIn">Get Started!</h1>
+<hr class="bg-white mx-auto mt-0" style="width: 90px;"/>
+<nav aria-label="breadcrumb">
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Navbar & Hero End -->
+<!-- Full Screen Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1">
+<div class="modal-dialog modal-fullscreen">
+<div class="modal-content" style="background: rgba(29, 29, 39, 0.7);">
+<div class="modal-header border-0">
+<button aria-label="Close" class="btn bg-white btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body d-flex align-items-center justify-content-center">
+<!-- <div class="input-group" style="max-width: 600px;">
+<input class="form-control bg-transparent border-light p-3" placeholder="Type search keyword" type="text"/>
+<button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+</div> -->
+</div>
+</div>
+</div>
+</div>
+<!-- Full Screen Search End -->
+<!-- About Start -->
+<div class="container-xxl py-5">
+<div class="container px-lg-5">
+<div class="row g-5">
+<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+<div class="section-title position-relative mb-4 pb-2">
+<h6 class="position-relative text-primary ps-4">Get Started!</h6>
+<h2 class="mt-2">Search for synonyms below</h2>
+</div>
+<p class="mb-4">We are dedicated to revolutionizing the way you interact with language. Our cutting-edge synonym recommendation system harnesses the power of advanced machine learning to ensure you find the perfect word, every time. Search for a synonym here:</p>
+<div class="row g-3">
+</div>
+
+
+<div class="search-container"><input id = 'searchInputRec' name="search" placeholder="Search..." type="text"/><button id = 'submitButtonRec' type="submit">Submit</button></div>
+<div id="loadingIndicator" style="display: none;">Loading<span>.</span><span>.</span><span>.</span></div>
+<div id="search-results" class="search-results"></div>
+
+<div class="col-sm-6">
+<h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>24/7 Support</h6>
+</div>
+<div class="col-sm-6">
+<h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Free</h6>
+</div>
+</div>
+</div>
+
+
+<div class="col-lg-6">
+<img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="../../SyntaxStar/img/about.jpg"/>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<h2 class="mt-2">Search for synonyms... using Machine Learning!</h2>
+    <div class="search-container">
+        <input id = 'searchInputFinal' name="search" placeholder="Search for synonyms..." type="text" required />
+        <button id = 'submitButtonFinal' type="submit">Submit</button>
+    </div
+
+<div id="loadingIndicator" style="display: none;">Loading<span>.</span><span>.</span><span>.</span></div>
+<div id="search-results" class="search-results"></div>
+
+
+
+
+
+
+
+<div class="word-counter-container">
+    <h2>Type Here:</h2>
+    <textarea id="writingArea" rows="10" style="width: 50%;"></textarea>
+    <p>Word Count: <span id="wordCount">0</span></p>
+    <!-- <button id="actionButton">Paraphrase!</button> -->
+    <!-- <button id="actionButton" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3" type="button">Paraphrase!</button> -->
+</div>
+<!-- About End -->
+
+
+<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            © <a class="border-bottom" href="#">SyntaxStar</a>, All Rights Reserved. 
+						
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+</div>
+
+<!-- Footer End -->
+<!-- Back to Top -->
+<a class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2" href="#"><i class="bi bi-arrow-up"></i></a>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../SyntaxStar//lib/wow/wow.min.js"></script>
+<script src="../../SyntaxStar/lib/easing/easing.min.js"></script>
+<script src="../../SyntaxStar/lib/waypoints/waypoints.min.js"></script>
+<script src="../../SyntaxStar/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="../../SyntaxStar/lib/isotope/isotope.pkgd.min.js"></script>
+<script src="../../SyntaxStar/lib/lightbox/js/lightbox.min.js"></script>
+<!-- Template Javascript -->
+<script src="../../SyntaxStar/js/main.js"></script>
+<script>
+    const searchInput = document.querySelector('input[name="search"]');
+    const submitButton = document.querySelector('.search-container button');
+    const resultContainer = document.createElement('div');
+    document.body.appendChild(resultContainer);
+
+    // Send input data to main.js when submit button is clicked
+    document.getElementById('submitButtonRec').addEventListener('click', () => {
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    loadingIndicator.style.display = 'block';
+    const query = document.getElementById('searchInputRec').value;
+    console.log("Sending search-query with:", query);
+    window.api.send("search-query", query);
+        setTimeout(() => {
+        loadingIndicator.style.display = 'none';
+        // Display results
+        // Assuming you have code here to populate #search-results with actual results
+    }, 2500); // Mock delay of 2 seconds      
+    });
+
+
+    document.getElementById('submitButtonFinal').addEventListener('click', () => {
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    loadingIndicator.style.display = 'block';
+    const query = document.getElementById('searchInputFinal').value;
+    console.log("Sending final-query with:", query);
+    window.api.send("final-query", query);
+
+    // Mock delay can be removed once actual implementation is ready
+    setTimeout(() => {
+        loadingIndicator.style.display = 'none';
+        // Actual result handling code will be triggered by the "final-response" listener
+    }, 8000); // This is just a placeholder for testing
+});
+
+
+
+    // Listen for response and display it
+    window.api.receive("search-response", (data) => {
+        const resultContainer = document.getElementById("search-results"); // Target the new container
+    resultContainer.innerHTML = data.join(', ');    });
+
+
+    window.api.receive("final-response", (data) => {
+    // Assuming 'data' is the string or data structure you expect from final.py
+    const resultContainer = document.getElementById("search-results");
+    resultContainer.innerHTML = data; // Adjust based on the actual data structure
+});
+</script>
+
+
+
+<script>
+    document.getElementById('writingArea').addEventListener('input', function () {
+      const text = this.value;
+      let wordCount = text.split(/\s+/).filter(function(n) { return n != '' }).length;
+      document.getElementById('wordCount').innerText = wordCount;
+    });
+    </script>
+
+
+<script>
+    document.getElementById('actionButton').addEventListener('click', function() {
+      // Your future functionality goes here
+    //   alert("Button clicked! Functionality to be implemented.");
+    });
+    </script>
+</body>
+</html>
